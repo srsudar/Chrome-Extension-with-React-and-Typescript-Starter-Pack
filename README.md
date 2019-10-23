@@ -1,3 +1,19 @@
+# Demo of utf-8 struggles with typescript and protobuf
+
+After cloning this, try to load `dist/` as an unpacked extension at
+`chrome://extensions`. It will complain that `contentscript.js` is not utf-8
+encoded.
+
+This problem appears after adding a proto that is built and output as
+typescript. `npm run build` should be sufficient to build yourself, with the
+relevant code in `src/contentscript/`.
+
+See [this issue](https://github.com/improbable-eng/ts-protoc-gen/issues/209) for
+more information.
+
+
+---
+
 <h1 align="center">Welcome to Chrome Extension with React and Typescript Starter Pack 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
